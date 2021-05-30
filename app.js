@@ -5,7 +5,7 @@ const _ = require("lodash")
 const app = express();
 var path = require('path');
 let ejs = require('ejs');
-const models = require('../models/model.js');
+const models = require('./models/model.js');
 const { concatSeries } = require("async");
 const env = require('dotenv').config()
 const User = models.user;
@@ -14,12 +14,12 @@ const Work = models.work;
 
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, '../templates/views'));
+app.set("views", path.join(__dirname, './templates/views'));
 
 
-app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.static(path.join(__dirname, '../l-s_customer')));
-app.use(express.static(path.join(__dirname, '../l-s_user')));
+app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, './l-s_customer')));
+app.use(express.static(path.join(__dirname, './l-s_user')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -35,7 +35,7 @@ mongoose.connect(`${process.env.MONGO}`, {
 
 app.route("/customer")
     .get((req, res) => {
-        res.sendFile(path.join(__dirname, '../l-s_customer/l-s.html'));
+        res.sendFile(path.join(__dirname, './l-s_customer/l-s.html'));
     })
 
 app.route("/customer-register")
@@ -81,7 +81,7 @@ app.route("/customer-login")
     })
 
 app.get('/user', (req, res) => {
-    res.sendFile(path.join(__dirname, '../l-s_user/l-s.html'))
+    res.sendFile(path.join(__dirname, './l-s_user/l-s.html'))
 })
 
 app.route("/user-register")
