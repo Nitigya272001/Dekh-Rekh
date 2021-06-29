@@ -42,7 +42,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    works: [workSchema]
+    works: [ObjectId]
 });
 
 const customerSchema = new mongoose.Schema({
@@ -78,3 +78,8 @@ module.exports.user = mongoose.model('User', userSchema);
 module.exports.customer = mongoose.model('Customer', customerSchema);
 
 // console.log('a');
+
+
+// workid
+
+// userid 
