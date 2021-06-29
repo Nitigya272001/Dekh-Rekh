@@ -1,5 +1,7 @@
 # Dekh-Rekh
 
 #### Efficient platform for better communication of providers and seekers of local services like household chores, electric work, driver, etc.
-●	Providers can create their profile and can update their work and price they can do. Seekers can search by work required.
-●	Implement using MongoDB, ExpressJs and NodeJs. 
+
+### ●	Providers can create their profile and can update their work and price they can do. Seekers can search by work required.
+
+### ●	Implement using MongoDB, ExpressJs and NodeJs. 
